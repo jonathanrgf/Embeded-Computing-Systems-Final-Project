@@ -1,0 +1,45 @@
+######################################################
+######################################################
+## UCF Constraints file                             ##
+######################################################
+######################################################
+
+######################
+# Timing Constraints #
+######################
+
+##### Grouping Constraints #####
+NET OSC_FPGA TNM_NET = clk50_grp;
+
+##### Clock Period Constraints #####
+TIMESPEC TS_PER_CLK50 = PERIOD "clk50_grp" 20.0 ns;
+
+#######################
+# Pin LOC Constraints #
+######################
+
+#PMOD1######################################################################################
+NET PMOD1<0>	LOC = "P112" ;
+NET PMOD1<1>	LOC = "P111" ;
+NET PMOD1<2>	LOC = "P67" ;
+NET PMOD1<3>	LOC = "P66" ;
+NET PMOD1<4>	LOC = "P62" ;
+NET PMOD1<5>	LOC = "P61" ;
+NET PMOD1<6>	LOC = "P58" ;
+NET PMOD1<7>	LOC = "P57" ;
+
+
+#PUSH BUTTONS##############################################################################
+NET PB<0>           LOC = "P83" ; # 
+NET PB<1>           LOC = "P59" ; #
+
+
+# LED 0 and LED 1 ###################
+NET LED<0>        LOC = "P140"  ;
+NET LED<1>        LOC = "P74"  ; 
+NET OSC_FPGA      LOC = "P85"  ;
+
+ 
+#Dip Switches##############################################################################
+#NET SW<0>           LOC = "P75" ;   # No used for project
+#NET SW<1>           LOC = "P78" ;   # not used for project
